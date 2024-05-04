@@ -184,9 +184,8 @@
                 // Menyusun pesan WhatsApp dengan format yang sesuai
                 var whatsappMessage = 'Halo, saya ' + name + '. Email saya: ' + email + '. Pesan: ' + message;
 
-               // Membuat link untuk membuka WhatsApp dengan pesan yang sudah disiapkan
-                var whatsappLink = 'https://wa.me/qr/' + encodeURIComponent('EP7T4UTA4QUBG1');
-
+                // Membuat link untuk membuka WhatsApp dengan pesan yang sudah disiapkan
+                var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(whatsappMessage);
 
                 // Mengarahkan pengguna ke aplikasi WhatsApp
                 window.open(whatsappLink);
