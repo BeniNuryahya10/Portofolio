@@ -171,26 +171,26 @@
                 <button type="button" class="btn btn-primary" onclick="sendWhatsApp()">Kirim</button>
               </center>
             </form>
+<script>
+  function sendWhatsApp() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('pesan').value;
 
-            <script>
-              function sendWhatsApp() {
-                var name = document.getElementById('name').value;
-                var email = document.getElementById('email').value;
-                var message = document.getElementById('pesan').value;
+    // Ubah nomor WhatsApp dengan kode negara yang sesuai (+62 untuk Indonesia)
+    var phoneNumber = '+62895606179505'; // Misalnya nomor WhatsApp Anda
 
-                // Ubah nomor WhatsApp sesuai dengan nomor yang ingin Anda tuju
-                var phoneNumber = '0895606179505'; // Misalnya nomor WhatsApp Anda
+    // Menyusun pesan WhatsApp dengan format yang sesuai
+    var whatsappMessage = 'Halo, saya ' + name + '. Email saya: ' + email + '. Pesan: ' + message;
 
-                // Menyusun pesan WhatsApp dengan format yang sesuai
-                var whatsappMessage = 'Halo, saya ' + name + '. Email saya: ' + email + '. Pesan: ' + message;
+    // Membuat link untuk membuka WhatsApp dengan pesan yang sudah disiapkan
+    var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(whatsappMessage);
 
-                // Membuat link untuk membuka WhatsApp dengan pesan yang sudah disiapkan
-                var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(whatsappMessage);
+    // Mengarahkan pengguna ke aplikasi WhatsApp
+    window.open(whatsappLink);
+  }
+</script>
 
-                // Mengarahkan pengguna ke aplikasi WhatsApp
-                window.open(whatsappLink);
-              }
-            </script>
             <!--  end wa-->
           </div>
         </div>
